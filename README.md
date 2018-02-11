@@ -1,8 +1,8 @@
 # Bao Vu
 
-A simple website 
+Nothing special, just create this while taking "On Demand Training" course of GitHub.
 
-## Authors
+### Authors
 
 * **Bao Vu** - [Bao Vu](https://github.com/baovu79)
 
