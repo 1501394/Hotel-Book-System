@@ -15,10 +15,10 @@ public class Login extends javax.swing.JFrame {
         //connect to database
         try
         {
-            Class .forName("com.mysql.jdbc.Driver");
+            Class .forName("com.mysql.jdbc.Driver").newInstance();
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel","root","lh123456");
         }
-        catch(ClassNotFoundException | SQLException e)
+        catch(IllegalAccessException | InstantiationException | ClassNotFoundException | SQLException e)
         {
             System.out.println(e.getMessage());
         }
@@ -97,6 +97,7 @@ public class Login extends javax.swing.JFrame {
         try{
             int flag=0;
             String sql="Select * from login;";
+            System.out.println(con);
             rs = con.createStatement().executeQuery(sql);
             String user=jTextField1.getText();
             String pswd =new String(jPasswordField1.getPassword());
@@ -117,10 +118,13 @@ public class Login extends javax.swing.JFrame {
             else
             {
                 JOptionPane.showMessageDialog(this, "The UserID and password are not matched", "Error",JOptionPane.ERROR_MESSAGE);
+        
             }
         }
-        catch(HeadlessException | SQLException ex){
+        catch(HeadlessException | SQLException | java.lang.NullPointerException ex){
+        	System.out.println(ex.getMessage());
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

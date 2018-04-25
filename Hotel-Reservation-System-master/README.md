@@ -3,7 +3,7 @@
 This is the project for my Java course. Its a very basic hotel reservation system based on java.swing and mysql. It has only a
 few of functions (reserve rooms for customers, manage information of reservation, rooms and customers) and I have created 3
 database tables for these purposes (roomdetail, bookingdiary, customerdetail). There is one extra table called "login" which
-actually has nothing to do but stores a pair of demo user (Csh) and password (Csh123). You can use it for the test after
+actually has nothing to do but stores a pair of demo user (Lh) and password (lh123). You can use it for the test after
 installation.
 
 # Installation
